@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="56dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="70dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/sunpowertitulo" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/b_botones"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="112dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/b_registro"
+            android:layout_width="70dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/b_registro" />
+        <ImageView
+            android:id="@+id/b_estadistica"
+            android:layout_width="70dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/b_estadisticas" />
+        <ImageView
+            android:id="@+id/b_monitoreo"
+            android:layout_width="70dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/b_monitoreo" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearconsumo"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/b_botones"
+        android:background="@drawable/backgroundboton"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:id="@+id/Tv_consumo"
+            android:layout_width="152dp"
+            android:layout_height="47dp"
+            android:layout_margin="15dp"
+            android:text="Consumo de Todas las Terrazas"
+            android:textColor="#254B89"/>
+
+        <TextView
+            android:id="@+id/Tv_consumodos"
+            android:layout_width="227dp"
+            android:layout_height="33dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="1"
+            android:text="Kwh" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearproduccion"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/backgroundboton"
+        app:layout_constraintTop_toBottomOf="@id/linearconsumo"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:id="@+id/Tv_produccion"
+            android:layout_width="152dp"
+            android:layout_height="47dp"
+            android:layout_margin="15dp"
+            android:text="Producción de Todas las Terrazas" />
+
+        <TextView
+            android:id="@+id/Tv_producciondos"
+            android:layout_width="227dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="1"
+            android:text="Kwh" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearnumero"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/linearproduccion"
+        android:background="@drawable/backgroundboton"
+        tools:layout_editor_absoluteX="0dp">
+        <TextView
+            android:id="@+id/Tv_numero"
+            android:layout_width="152dp"
+            android:layout_height="47dp"
+            android:layout_margin="15dp"
+            android:text="Numero de Terrazas Incluidas" />
+
+        <TextView
+            android:id="@+id/Tv_numerodos"
+            android:layout_width="227dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="1"
+            android:text="#" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearenergia"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/linearnumero"
+        android:background="@drawable/backgroundboton"
+        tools:layout_editor_absoluteX="0dp">
+        <TextView
+            android:id="@+id/Tv_energia"
+            android:layout_width="152dp"
+            android:layout_height="47dp"
+            android:layout_margin="15dp"
+            android:text="Energía Obtenida en Una Semana" />
+
+        <TextView
+            android:id="@+id/Tv_energiados"
+            android:layout_width="227dp"
+            android:layout_height="33dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="1"
+            android:text="Kwh" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linarimpacto"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/linearenergia"
+        android:background="@drawable/backgroundboton"
+        tools:layout_editor_absoluteX="0dp">
+        <TextView
+            android:id="@+id/Tv_impacto"
+            android:layout_width="152dp"
+            android:layout_height="47dp"
+            android:layout_margin="15dp"
+            android:text="Impacto Ambiental" />
+
+        <TextView
+            android:id="@+id/Tv_impactodos"
+            android:layout_width="227dp"
+            android:layout_height="33dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="1"
+            android:hint="CO2 Ahorrado" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearporcentaje"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/linarimpacto"
+        android:background="@drawable/backgroundboton"
+        tools:layout_editor_absoluteX="0dp">
+        <TextView
+            android:id="@+id/Tv_porcentaje"
+            android:layout_width="152dp"
+            android:layout_height="47dp"
+            android:layout_margin="15dp"
+            android:text="Porcentaje de Energia Solar Utilizada Semana" />
+
+        <TextView
+            android:id="@+id/Tv_porcentajedos"
+            android:layout_width="227dp"
+            android:layout_height="33dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="1"
+            android:text="kWh   %" />
+    </LinearLayout>
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/linearporcentaje"
+        android:background="@drawable/backgroundboton"
+        tools:layout_editor_absoluteX="0dp">
+        <TextView
+            android:id="@+id/Tv_dias"
+            android:layout_width="152dp"
+            android:layout_height="47dp"
+            android:layout_margin="15dp"
+            android:text="Dias de Producción Inferior al Promedio" />
+
+        <TextView
+            android:id="@+id/Tv_diasdos"
+            android:layout_width="227dp"
+            android:layout_height="33dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="1"
+            android:text="Kwh" />
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
